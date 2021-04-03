@@ -1,0 +1,41 @@
+Position
+static
+Par défaut, tous les éléments sont en position static.
+
+Avec cette valeur, un élément est positionné dans le flux, et les propriétés top, bottom, right, left n'ont aucun effet.
+
+relative
+Avec cette valeur, l'élément occupe sa position normale dans le flux, MAIS on peut le "décaller" avec les propriétés top, bottom, right, left.
+
+Attention : la position de ses voisins n'est pas affectée par les décalages (quitte à créer des trous !)
+
+fixed
+Avec cette valeur, l'élément sort complètement du flux HTML. Il n'influence plus personne ! et est positionné par rapport à la fenêtre du navigateur.
+
+Pour placer un tel élément, on utilise, là encore, top, bottom, right, left.
+
+absolute
+Avec cette valeur, l'élément se position PAR RAPPORT AU PREMIER PARENT POSITIONNÉ (=avec une position autre que static). L'élément est sorti du flux, et n'influence plus ses voisins, ni ses parents.
+
+On peut positionner cet élément avec top, bottom, right, left.
+
+z-index
+Lorsque 2 éléments positionnés se supperposent, par défaut les navigateurs jouent à "premier arrivé, premier affiché" (donc le 2ème élément PASSE DEVANT le premier)
+
+On peut modifier ce comportement avec z-index (chiffre entier et sans unité):
+
+plus le chiffre est petit, plus l'élément est "loin de l'utilisateur"
+plus le chiffre est grand, plus l'élément est proche de l'utilisateur (donc il recouvre potentiellement les autres)
+note : "auto" correspond à 0
+ok, mais on choisit comment ??
+Un bonne astuce, c'est de se poser ces 3 questions, dans l'ordre :
+
+mon élémént est-il placé par rapport à la fenetre ?
+si oui => position: fixed
+sinon, question suivante...
+mon élément doit-il influencer la taille de son parent ?
+si non => position: absolute (attention à positionner le parent !)
+si oui, question suivante...
+mon élément, si il est décallé, doit-il passer par dessus ses voisins (ou plutôt les faire bouger) ?
+si on doit passer par dessus => position: relative
+sinon (les voisins doivent bouger) => position: static (= rien du tout!)

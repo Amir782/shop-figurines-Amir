@@ -1,0 +1,115 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: content-box;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+header h1{
+    background-color: #c80000;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 20px 40px;
+}
+
+header h1 span{
+    font-size: 1.2rem;
+
+}
+
+header h2{
+    background-color: #333;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+}
+
+header h2 span{
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+section{
+    width: 80%;
+    margin: 5vh auto;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    /* flex-flow est la combinaison des propriétés flex-direction et flex-wrap */
+    flex-flow: row wrap;  
+    justify-content: space-evenly;
+}
+
+.article{
+    margin: 10px 0;
+    padding: 25px 25px 10px 25px;
+    border: 1px solid black;
+}
+
+.article__header{
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.article__main{
+    padding: 0 0 30px 0;
+}
+
+.article__footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: #c80000;
+    color: white;
+}
+
+.article__header_figcaption{
+    margin: 5px 0;
+    padding: 5px 0;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.article__header img{
+    display: block;
+    height: 250px;
+    margin: 5px auto;
+}
+
+.article__main_h3{
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0 0 10px 0;
+}
+
+.article__footer a{
+    /* text-decoration: underline; */
+    padding: 20px 0;
+    color: white;
+}
+
+.article__footer p{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.article__footer span{
+    text-decoration: line-through;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
