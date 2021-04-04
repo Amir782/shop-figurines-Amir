@@ -3,8 +3,27 @@ body{
     box-sizing: content-box;
     font-size: 1.2rem;
     font-weight: 500;
+    position: absolute;
 }
 
+.header{
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100px;
+}
+
+.main{
+    position: relative;
+    top: 135px;
+    z-index: 5;
+}
+
+.footer{
+    position: relative;
+    top: 135px;
+    z-index: 1;
+}
 
 header h1{
     background-color: #c80000;
@@ -16,7 +35,6 @@ header h1{
 
 header h1 span{
     font-size: 1.2rem;
-
 }
 
 header h2{
@@ -79,7 +97,10 @@ section{
 
 .article__header img{
     display: block;
-    height: 250px;
+    /* RESPONSIVE IMAGE */
+    max-width: 100%;        /* The max-width of 100% will make sure the image is never wider than the container it is in */
+    height: auto;           /* The height of auto will make the image keep its original aspect ratio. */
+    /* RESPONSIVE IMAGE */
     margin: 5px auto;
 }
 
@@ -95,6 +116,7 @@ section{
     color: white;
 }
 
+
 .article__footer p{
     font-size: 1.5rem;
     font-weight: 700;
@@ -107,7 +129,7 @@ section{
 }
 
 
-footer{
+.footer{
     padding: 20px;
     text-align: center;
     background-color: #333;
